@@ -1,2 +1,8 @@
-- name: Hercules Insights
-  uses: src-d/hercules@v10.7.2
+jobs:
+  hercules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hercules Insights
+        uses: src-d/hercules@v10.7.2
+
+
