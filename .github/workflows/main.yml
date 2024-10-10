@@ -1,8 +1,19 @@
+name: Hercules Workflow
+
+on:
+  push:
+    branches:
+      - main     # Run the workflow on push to the main branch
+  pull_request:
+    branches:
+      - main     # Run the workflow on pull requests to the main branch
+
 jobs:
   hercules:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Hercules Insights
         uses: src-d/hercules@v10.7.2
-
-
